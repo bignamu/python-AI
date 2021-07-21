@@ -1,0 +1,10 @@
+[오후 2:40] 백상엽(대구_심화)
+1. pytorch에서 제공하는 튜토리얼
+- Mask R-CNN
+- Colab 링크: https://colab.research.google.com/github/pytorch/vision/blob/temp-tutorial/tutorials/torchvision_finetuning_instance_segmentation.ipynb2. torchvision 이용
+- references 코드
+- https://github.com/pytorch/vision
+- references 폴더 밑에 detection coco 기준 예제 코드 존재
+Google Colaboratory
+
+
