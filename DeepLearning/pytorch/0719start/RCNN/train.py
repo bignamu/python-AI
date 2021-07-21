@@ -45,7 +45,7 @@ def get_dataset(name, image_set, transform, data_path, download=False):
     }
     p, ds_fn, num_classes = paths[name]
 
-    if p == "voc":
+    if name == "voc":
         # 데이터셋 다운로드를 위함
         ds = ds_fn(p, image_set=image_set, transforms=transform, download=download)
     else:
@@ -142,9 +142,9 @@ def main(args):
     
     # voc만 download 지원 (coco는 다운로드 불가)
     dataset, num_classes = get_dataset(args.dataset, "train", get_transform(True, args.data_augmentation),
-                                       args.data_path, download=False)
+                                       args.data_path, download=True)
     dataset_test, _ = get_dataset(args.dataset, "val", get_transform(False, args.data_augmentation),
-                                  args.data_path, download=False)
+                                  args.data_path, download=True)
 
     print("Creating data loaders")
     if args.distributed:
