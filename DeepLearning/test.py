@@ -1,15 +1,25 @@
+import datetime
+import os
+import time
+
+import torch
+import torch.utils.data
+import torchvision
+import torchvision.models.detection
+import torchvision.models.detection.mask_rcnn
+
+import cv2
 import numpy as np
 
-import time
-a = np.arange(5)
-b = np.arange(1, 5)
-c = np.arange(2, 10, 2)
-
-print(a)
-print(b)
-print(c)
+import argparse
 
 
-while 1:
-    print('test')
-    time.sleep(3)
+parser = argparse.ArgumentParser(description='PyTorch Detection Training')
+
+parser.add_argument('--data-path', default='D:ExDark', help='dataset')
+parser.add_argument('--dataset', default='voc', help='dataset')
+
+args = parser.parse_args()
+
+print(args)
+print(args.data_path)
