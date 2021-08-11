@@ -12,7 +12,7 @@ options.add_argument("--start-maximized")
 
 parser = ArgumentParser(description='yandex')
 parser.add_argument('--count',default = 1000)
-parser.add_argument('--query',default = 'car in street')
+parser.add_argument('--query',default = 'yandex_mask')
 
 args = parser.parse_args()
 # print(args.count)
@@ -37,7 +37,8 @@ def run(query, count):
 	# browser.set_window_size(1024, 768)
 
 
-	url = 'https://yandex.com.tr/gorsel/search?text='+query
+	# url = 'https://yandex.com.tr/gorsel/search?text='+query
+	url = 'https://yandex.com/images/search?url=https%3A%2F%2Favatars.mds.yandex.net%2Fget-images-cbir%2F2271911%2FqGMDLJbmDA3PCu2vdKzWWg5579%2Forig&rpt=imageview&source-serpid=RELH2kmG1ZnBn7OUv1qEjw&source-serpid=ilqPo6CLfCRg4AA6IGFMCw&cbir_id=2271911%2FqGMDLJbmDA3PCu2vdKzWWg5579&cbir_page=similar&isize=large'
 
 	browser.get(url)
 	time.sleep(1)
@@ -83,7 +84,7 @@ def run(query, count):
 		
 		for i in range(3):
 			try:
-				urllib.request.urlretrieve(link, "./"+query+"/" + query+ str(counter+1) + ".jpeg")
+				urllib.request.urlretrieve(link, "./"+query+"/" + query+ str(counter+1) + ".jpg")
 				counter += 1
 				break
 			except:
