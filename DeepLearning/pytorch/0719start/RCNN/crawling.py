@@ -21,7 +21,7 @@ from selenium.webdriver.chrome.options import Options
 class Crawler:
     def __init__(self):
         # 이미지들이 저장될 경로 및 폴더 이름
-        self.path = "H:\\Resources\\pytorch_dataset\\cars"
+        self.path = "H:\\Resources\\pytorch_dataset\\mask"
         self.date = str(date.today())
 
         # 검색어 입력 및 중복 검사
